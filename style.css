@@ -18,18 +18,23 @@ body {
 
 .container {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-color: var(--bg-primary);
+    border: 2px solid red;
+    overflow: hidden;
 }
 
 .wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
     height: auto;
+    
 }
 
 .card {
+    flex:1;
     border: 1px solid white;
     background-color: var(--bg-secondary);
     color: var(--txt-secondary);
@@ -72,3 +77,15 @@ body {
     transition: 0.3s ease-in-out;
 }
 
+
+
+@media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column; /* stack items vertically on smaller screens */
+      
+    }
+    .card {
+        width: 200px; /* make the card smaller on smaller screens */
+        height: 150px; /* make the card smaller on smaller screens */
+      }
+  }
